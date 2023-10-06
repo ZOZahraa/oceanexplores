@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="For_home.css">
+    <title>Kides</title>
+</head>
+<body>
+    <div class="kides">
+        <h2 class="section_name">For Kides</h2>
+  
+        <div class="vedio_caontaine">
+          <h2 class="title_vedio">OCEANS for Kids - Ocean Viwe
+          </h2>
+          <br>
+          <iframe src="vid 3.mp4
+          " width="80%" height="450px"></iframe>
+          <div class="vedio_caontaine">
+            <h2 class="title_vedio">OCEANS for Kids - Fish learning
+            </h2>
+            <br>
+            <iframe src="vid 2.mp4
+            " width="80%" height="450px"></iframe>
+             <div class="vedio_caontaine">
+              <h2 class="title_vedio">OCEANS for Kids - Geography for Kids
+              </h2>
+              <br>
+              <iframe src="vid 1.mp4
+              " width="80%" height="450px" class="lastfram"></iframe>
+              <h3 class="title_vedio" id="lastt">Ocean Quiz</h3>
+        </div>
+          </div>
+  
+        <style>
+          body,
+          html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+          }
+  
+          .wrapper {
+            width: 80%;
+            margin: 0 auto;
+            height: 100%;
+            padding-top: 0px;
+          }
+  
+          #quiz {
+            background-color: #0c2d48;
+            padding-bottom: 60px;
+            width: 100%;
+            border-radius: 2%;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0 6px 6px rgba(0, 0, 0, 0.23);
+          }
+  
+          #quiz > h1 {
+            text-align: center;
+            padding-top: 25px;
+            font-size: 20px;
+          }
+  
+          .questions {
+            font-size: 28px;
+            font-weight: 700;
+            font-style: italic;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 20px;
+          }
+  
+          .answers div {
+            padding: 10px 0 0 0;
+            font-size: 16px;
+          }
+  
+          .answers div:hover {
+            cursor: pointer;
+            color: #fbcb43;
+          }
+  
+          .answers {
+            padding: 0px 0 10px 0px;
+          }
+  
+          .answers div {
+            width: 50%;
+            margin: 0 auto;
+            padding-bottom: 15px;
+            border-top: 1px solid grey;
+          }
+  
+          .answers div:first-child {
+            border: none;
+          }
+  
+          .checker {
+            display: inline-block;
+            width: 200px;
+            margin: 0 auto;
+          }
+  
+          .correct,
+          .false {
+            background-color: #109d59;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 4px;
+            float: left;
+            margin-left: 2px;
+            margin-top: 2px;
+          }
+  
+          .false {
+            background-color: #dc4437;
+          }
+          
+        </style>
+        <div class="img_diff">
+          <img src="ddd.jpg" alt="" width="80%" height="600px" >
+        </div>
+        <div class="wrapper">
+          <div id="quiz">
+            <h1>Ocean quiz</h1>
+  
+            <p class="questions"></p>
+  
+            <div class="answers"></div>
+  
+            <div class="checkAnswers">
+              <h3>Correct?</h3>
+              <div class="checker"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script>
+        window.onload = function () {
+          var questionArea = document.getElementsByClassName("questions")[0],
+            answerArea = document.getElementsByClassName("answers")[0],
+            checker = document.getElementsByClassName("checker")[0],
+            current = 0,
+            // An object that holds all the questions + possible answers.
+            // In the array --> last digit gives the right answer position
+            allQuestions = {
+              "What is the biggest ocean": ["Pacfic", "Indian", "Atlantic", 0],
+  
+              "How much Ocean Contrbute in Earth's oxygen?": [
+                "40%",
+                "50%",
+                "20%",
+                1,
+              ],
+  
+              "How much the ocean cover from earth's total surface?": [
+                "more 20%",
+                "less 40%",
+                "equel to 70%",
+                2,
+              ],
+              "From the above photo, theres a diffrent in ?": [
+                "crab colour",
+                "Algee color",
+                "Wheale colour",
+                1,
+              ],
+              "From the above photo, theres a diffrent between ?": [
+                " The boat and the ship",
+                "the number of cloudes",
+                "The colour of the fish",
+                2,
+              ],
+              "From the above photo, theres a diffrent in the number of ?": [
+                "The yellow fish",
+                "The shells",
+                "The crabs",
+                0,
+              ],
+              "From the above photo, theres a diffrent between ?": [
+                "Eyes of starfish",
+                "The types of colar relefs",
+                "The number of the clouds",
+                0,
+              ],
+            };
+  
+          function loadQuestion(curr) {
+            // This function loads all the question into the questionArea
+            // It grabs the current question based on the 'current'-variable
+  
+            var question = Object.keys(allQuestions)[curr];
+  
+            questionArea.innerHTML = "";
+            questionArea.innerHTML = question;
+          }
+  
+          function loadAnswers(curr) {
+            // This function loads all the possible answers of the given question
+            // It grabs the needed answer-array with the help of the current-variable
+            // Every answer is added with an 'onclick'-function
+  
+            var answers = allQuestions[Object.keys(allQuestions)[curr]];
+  
+            answerArea.innerHTML = "";
+  
+            for (var i = 0; i < answers.length - 1; i += 1) {
+              var createDiv = document.createElement("div"),
+                text = document.createTextNode(answers[i]);
+  
+              createDiv.appendChild(text);
+              createDiv.addEventListener("click", checkAnswer(i, answers));
+  
+              answerArea.appendChild(createDiv);
+            }
+          }
+  
+          function checkAnswer(i, arr) {
+            // This is the function that will run, when clicked on one of the answers
+            // Check if givenAnswer is sams as the correct one
+            // After this, check if it's the last question:
+            // If it is: empty the answerArea and let them know it's done.
+  
+            return function () {
+              var givenAnswer = i,
+                correctAnswer = arr[arr.length - 1];
+  
+              if (givenAnswer === correctAnswer) {
+                addChecker(true);
+              } else {
+                addChecker(false);
+              }
+  
+              if (current < Object.keys(allQuestions).length - 1) {
+                current += 1;
+  
+                loadQuestion(current);
+                loadAnswers(current);
+              } else {
+                questionArea.innerHTML = "Done";
+                answerArea.innerHTML = "";
+              }
+            };
+          }
+  
+          function addChecker(bool) {
+            // This function adds a div element to the page
+            // Used to see if it was correct or false
+  
+            var createDiv = document.createElement("div"),
+              txt = document.createTextNode(current + 1);
+  
+            createDiv.appendChild(txt);
+  
+            if (bool) {
+              createDiv.className += "correct";
+              checker.appendChild(createDiv);
+            } else {
+              createDiv.className += "false";
+              checker.appendChild(createDiv);
+            }
+          }
+  
+          // Start the quiz right away
+          loadQuestion(current);
+          loadAnswers(current);
+        };
+      </script>
+      <p></p>
+          <style> 
+              .container{
+          position: relative; 
+          overflow: hidden; 
+        }
+        .container span{
+          position: absolute; 
+                  bottom: -50px; 
+          border-radius: 50%; 
+          pointer-events: none; 
+                  box-shadow: inset 0 0 10px 
+                  rgba(225, 225, 225, 0.5); 
+                  animation: animate 4s line
+  
+  
+        }
+        .container span::before { 
+                  content: ""; 
+                  position: absolute; 
+                  width: 100%; 
+                  height: 100%; 
+                  transform: scale(0.25) translate(-70%, -70%); 
+                  background: 
+                  radial-gradient(#ffffff, transparent); 
+                  border-radius: 50%; 
+              } 
+              section { 
+                  position: relative; 
+                  width: 100%; 
+                  overflow: hidden; 
+                  background: #0c2d48; 
+  
+              } 
+          
+              section span { 
+                  position: absolute; 
+                  bottom: -50px; 
+                  background: transparent; 
+                  border-radius: 50%; 
+  
+                  pointer-events: none; 
+                  box-shadow: inset 0 0 10px 
+                  rgba(225, 225, 225, 0.5); 
+                  animation: animate 4s linear infinite; 
+              } 
+              section span::before { 
+                  content: ""; 
+                  position: absolute; 
+                  width: 100%; 
+                  height: 100%; 
+                  transform: scale(0.25) translate(-70%, -70%); 
+                  background: 
+                  radial-gradient(#ffffff, transparent); 
+                  border-radius: 50%; 
+              } 
+              @keyframes animation { 
+                  0% { 
+                      transform: translateY(0%); 
+                      opacity: 1; 
+                  } 
+                  99% { 
+                      opacity: 1; 
+                  } 
+                  100% { 
+                      transform: translateY(-1200%); 
+                      opacity: 1; 
+                  } 
+              } 
+          </style> 
+      </head> 
+      <body> 
+          <section> 
+          </section> 
+          <script type="text/javascript"> 
+              function createBubble() { 
+                  const section = 
+                      document.querySelector("Section"); 
+                  const createElement = 
+                      document.createElement("span"); 
+                  var size = Math.random() * 60; 
+  
+                  createElement.style.animation = 
+                  "animation 6s linear infinite"; 
+                  createElement.style.width = 180 + size + "px"; 
+                  createElement.style.height = 180 + size + "px"; 
+                  createElement.style.left = 
+                  Math.random() * innerWidth + "px"; 
+                  section.appendChild(createElement); 
+  
+                  setTimeout(() => { 
+                      createElement.remove(); 
+                  }, 4000); 
+              } 
+              setInterval(createBubble, 100); 
+          </script> 
+      </div>
+</body>
+</html>

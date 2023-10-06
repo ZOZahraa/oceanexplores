@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+  @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+body {
+  height: 90vh;
+  background-color: #b1d4e0;
+}
+.container {
+  background-color: #b1d4e0;
+border-bottom: 2px solid #000;
+  height: 95vh;
+  border-bottom: 2px solid #000;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: relative;
+  align-items: baseline;
+  border-bottom: 2px solid #000;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(9, 70, 70);
+  font-size: 18px;
+}
+a:hover {
+  border-bottom: 2px solid #777879f1;
+  filter: drop-shadow(#000 2px 2px 2px);
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.main_logo {
+  margin-left: 40px;
+  color: rgb(9, 70, 70);
+  color: #000;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  width: 12%;
+  border-right: 2px solid #000;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  position: relative;
+  height: 30px;
+  margin-right: 40px;
+}
+
+.log_sing {
+  width: 18%;
+  display: flex;
+  position: relative;
+  margin-right: 30px;
+  align-items: baseline;
+  border-left: 2px solid #000;
+}
+
+.sing {
+  height: 40px;
+  width: 90px;
+  background-color: #0c2d48;
+  color: #b1d4e0;
+  padding: 10px 15px;
+  border-radius: 30%;
+  border: none;
+  margin-left: 15px;
+}
+
+.log {
+  padding-left: 20px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Name_logo {
+  margin: 80% 0 30%;
+  font-size: 50px;
+  font-weight: 800;
+  -webkit-text-fill-color: #b1d4e0;
+  -webkit-text-stroke-color: #0c2d48;
+  -webkit-text-stroke-width: 3px;
+  text-align: center;
+}
+.mid_bar {
+  background-color: #0c2d48;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 12px 5%;
+  border-radius: 12px;
+  margin-bottom: 4%;
+  filter: drop-shadow(#000 2px 2px 2px);
+}
+.mid_link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b1d4e0;
+}
+.next-button {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.others {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social {
+  color: #000;
+  border-top: 2px solid #000;
+  margin-top: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main_links {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+i {
+  font-size: 20px;
+  color: #0c2d48;
+}
+#bot {
+  margin-right: 15px;
+}
+
+.section_name {
+  margin: 20px 0 40px 15px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 0 3% 80px 6%;
+  justify-content: space-around;
+}
+
+.main_card {
+  background-color: #9edcf0;
+  text-align: center;
+  border-radius: 9px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+.main_card:hover {
+text-shadow: 2px 2px white;
+  transform: scale(1.1);
+  transition: 0.6s;
+  filter: drop-shadow(3px 3px 3px #0c2d48);
+}
+.conainer {
+  background-color: #b1d4e0;
+}
+.more {
+  display: none;
+}
+#last {
+  padding-bottom: 30px;
+}
+.section_name {
+  border-radius: 4px;
+  border-right: 2px solid #000;
+  width: 15%;
+  padding-top: 70px;
+  border-left: 2px solid #000;
+  padding-left: 9px;
+  border-bottom: 2px solid #000;
+  border-width: 50%;
+  border-color: #0c2d48;
+}
+.organzions {
+  background-color: #9edcf0;
+}
+.organiztion_name {
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+.ex {
+  padding-left: 50px;
+  margin-bottom: 30px;
+}
+.kides {
+  background-color: #b1d4e0;
+
+}
+.wrapper {
+  padding-bottom: 30px;
+  margin-top: 60px;
+}
+.title_vedio{
+  padding-left: 50px;
+  font-size: 29px;
+  margin:50px 50px 0 30px ;
+}
+.section_name{
+  font-size: 32px;
+}
+iframe{
+  margin-left: 
+  12%;
+}
+.lastfram{
+  margin-bottom: 50px;
+}
+#lastt{
+  margin-bottom: 60px;
+}
+.indian_ocean{
+  width: 30%;
+}
+.earth_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.earths{
+  height: 400px;
+  margin-bottom: 30px;
+}
+.rows{
+  display: flex;
+  flex-direction: row;
+  
+}
+.main_card1{
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+ background-color: #9edcf0;
+ margin-bottom: 20px;
+ filter: drop-shadow(2px 2px 2px #0c2d48);
+
+}
+.card_title{
+  margin: 30px 0 20px;
+}
+.explain{
+  margin:0 10px 30px;
+  font-size: 18px;
+  color: #0c2d48;
+  text-shadow: black;
+
+}
+.location{   background-color: #b1d4e0;
+border-bottom: 2px solid #000;}
+.main_card1:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  text-shadow:2px 2px 2px #fff;
+  filter: drop-shadow(5px 5px 5px #0c2d48);
+
+}
+.main_card{
+  width: 400px;
+}
+.organiztion_name{
+  font-size: 30px;
+  color: #190981;
+  text-shadow: 2px 2px white;
+  margin-top: 40px;
+}
+.ex{
+  font-size:20px;
+  color:black ;
+  margin-bottom: 50px;
+}
+#lastbtn{
+  margin-bottom: 30px;
+}
+.buttom{
+  margin: 30px 0 100px 60px;
+  background-color: #0c2d48;
+  color: #b1d4e0;
+  padding: 20px;
+  width: 80px;
+  height: 30px;
+  border-radius: 17px
+; 
+}
+.organzions{
+  height: 190vh;
+  background-color: #b1d4e0;
+  border-bottom: 2px solid #000;
+}
+.imcont{
+  width: 80%;
+display: flex;
+margin: 20px 0 20px 12%;
+}
+.plankton{
+  background-color: #b1d4e0;
+}
+.explains{
+  width: 60%;
+  font-size: 18px;
+  margin-left: 20px;
+  font-weight: 900;
+  text-shadow: 1px 1px #fff;
+  letter-spacing: 0.3px;
+}
+.imex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.secon{
+  width: 30%;
+  padding-bottom: 40px;
+}
+.lastimx{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lastthin{
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.cont{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.img_diff{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-left: 140px;
+  margin-bottom: 40px;
+}
+.live{
+  border-bottom: 2px solid #000;
+  background-color: #b1d4e0;
+}
+.plankton{
+  border-bottom: 2px solid #000;
+  background-color: #b1d4e0;
+}
